@@ -5,7 +5,7 @@ Firebase CLI packaged on alpine linux container
 The simplest way to use is just call this line below.
 
 ```bash
-docker run -it -v \"$(pwd):/home/node/app\" -v \"$HOME/.config:/home/node/.config\" -w \"/home/node/app\" --user=node -p 9005:9005 -p 5000:5000 node_firebase sh"
+docker run -it -v \"$(pwd):/home/node/app\" -v \"$HOME/.config:/home/node/.config\" -w \"/home/node/app\" --user=node -p 9005:9005 -p 5000:5000 brunodles/firebase-cli sh"
 ```
 This command will:
 * Run docker on interative mode
@@ -21,5 +21,5 @@ Another way to use, is to create a alias.
 
 Just add it on `~/.bashrc` or `~/.zshrc` and call it as it was installed:
 ```bash
-alias firebase="mkdir $HOME/.config >/dev/null 2>&1 || docker run -it -v \"$(pwd):/home/node/app\" -v \"$HOME/.config:/home/node/.config\" -w \"/home/node/app\" --user=node -p 9005:9005 -p 5000:5000 node_firebase firebase"
+alias firebase="mkdir $HOME/.config >/dev/null 2>&1 || docker run -it -v \"$(pwd):/home/node/app\" -v \"$HOME/.config:/home/node/.config\" -w \"/home/node/app\" --user=node -p 9005:9005 -p 5000:5000 brunodles/firebase-cli firebase"
 ```
